@@ -1,0 +1,44 @@
+<!-- Given inputs with numbers, a paragraph and a button. By clicking on the button, 
+    find the sum of the numbers from the inputs and write this sum in the text of the 
+    paragraph. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <title>Document</title>
+</head>
+<body>
+
+  
+    <p id="p">text1</p>
+   
+
+    <input type="number" class = "www" value='4'>
+    <input type="number" class = "www" value='2'>
+    <input type="number" class = "www" value='9'>
+    <input type="number" class = "www" value='11'>
+    <input type="button" id="button" value="жми">
+
+    <script>
+
+        let p = document.querySelector("#p");
+        let elem = document.querySelectorAll(".www");
+        let button = document.querySelector("#button");
+
+        button.addEventListener("click", function() {
+            let result = 0;
+            for (let elems of elem) {
+                result += Number(elems.value);
+            }
+            p.innerHTML = result;
+        });
+
+        
+    </script>
+    
+</body>
+</html>
